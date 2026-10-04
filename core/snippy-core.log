@@ -1,0 +1,198 @@
+This is snippy-core 4.6.0
+Obtained from http://github.com/tseemann/snippy
+Enabling bundled tools for linux
+Found any2fasta - /home/joy/miniforge3/envs/typhi_amr/bin/any2fasta
+Found samtools - /home/joy/miniforge3/envs/typhi_amr/bin/samtools
+Found minimap2 - /home/joy/miniforge3/envs/typhi_amr/bin/minimap2
+Found bedtools - /home/joy/miniforge3/envs/typhi_amr/bin/bedtools
+Found snp-sites - /home/joy/miniforge3/envs/typhi_amr/bin/snp-sites
+Saving reference FASTA: core/core.ref.fa
+This is any2fasta 0.8.1
+Opening 'ref/CT18.gbk'
+Detected GENBANK format
+Read 225343 lines from 'ref/CT18.gbk'
+Wrote 1 sequences from GENBANK file.
+Processed 1 files.
+Done.
+Loaded 1 sequences totalling 4809037 bp.
+Auto --mask mode initiated: self-aligning --ref core/core.ref.fa to identify repeats
+Indexing 'core/core.ref.fa'
+Self-aligning --ref to identify repeats to core/core.self_mask.bed
+[M::mm_idx_gen::0.183*1.00] collected minimizers
+[M::mm_idx_gen::0.205*1.19] sorted minimizers
+[M::main::0.205*1.19] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.217*1.18] mid_occ = 10
+[M::mm_idx_stat] kmer size: 15; skip: 19; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.226*1.17] distinct minimizers: 482132 (98.01% are singletons); average occurrences: 1.031; average spacing: 9.670; total length: 4809037
+[M::worker_pipeline::0.576*1.07] mapped 1 sequences
+[M::main] Version: 2.28-r1209
+[M::main] CMD: minimap2 -D -P -w19 -m200 core/core.ref.fa core/core.ref.fa
+[M::main] Real time: 0.587 sec; CPU: 0.625 sec; Peak RSS: 0.071 GB
+Loading mask bed file: core/core.self_mask.bed
+Will mask 32 regions totalling 202040 bp ~ 4.20%
+0	ERR573926	snp=780	del=150	ins=75	het=2019	unaligned=155133
+1	ERR573932	snp=644	del=170	ins=46	het=2498	unaligned=145830
+2	ERR573934	snp=786	del=156	ins=75	het=2119	unaligned=155214
+3	ERR573938	snp=648	del=165	ins=50	het=2515	unaligned=149843
+4	ERR573941	snp=518	del=124	ins=82	het=2452	unaligned=142591
+5	ERR573942	snp=534	del=124	ins=77	het=2301	unaligned=142702
+6	ERR573943	snp=631	del=112	ins=51	het=2539	unaligned=147004
+7	ERR573944	snp=644	del=180	ins=44	het=2618	unaligned=145851
+8	ERR573945	snp=554	del=132	ins=65	het=2507	unaligned=154288
+9	ERR573947	snp=617	del=111	ins=50	het=3027	unaligned=145831
+10	ERR573948	snp=607	del=152	ins=45	het=3095	unaligned=146046
+11	ERR573949	snp=613	del=182	ins=49	het=3125	unaligned=145874
+12	ERR573950	snp=652	del=171	ins=53	het=2107	unaligned=145529
+13	ERR573952	snp=649	del=177	ins=50	het=2297	unaligned=145967
+14	ERR573954	snp=650	del=191	ins=51	het=2403	unaligned=146222
+15	ERR573955	snp=629	del=164	ins=38	het=2701	unaligned=146111
+16	ERR573956	snp=665	del=158	ins=52	het=2079	unaligned=145565
+17	ERR573957	snp=647	del=158	ins=51	het=2243	unaligned=145842
+18	ERR573959	snp=626	del=157	ins=49	het=2732	unaligned=145706
+19	ERR573960	snp=664	del=165	ins=51	het=2527	unaligned=151689
+20	ERR573961	snp=779	del=143	ins=85	het=1905	unaligned=153809
+21	ERR573962	snp=479	del=92	ins=67	het=2554	unaligned=142405
+22	ERR573964	snp=780	del=143	ins=85	het=2031	unaligned=150627
+23	ERR573966	snp=659	del=171	ins=50	het=2387	unaligned=144315
+24	ERR573968	snp=596	del=103	ins=66	het=2378	unaligned=153113
+25	ERR573969	snp=646	del=177	ins=47	het=2410	unaligned=144369
+26	ERR573971	snp=661	del=177	ins=50	het=2058	unaligned=147247
+27	ERR573972	snp=778	del=143	ins=80	het=2116	unaligned=154445
+28	ERR573973	snp=648	del=177	ins=50	het=2386	unaligned=145423
+29	ERR657370	snp=649	del=105	ins=48	het=643	unaligned=149953
+30	ERR657371	snp=646	del=98	ins=45	het=626	unaligned=150094
+31	ERR657372	snp=572	del=156	ins=63	het=465	unaligned=147533
+32	ERR657373	snp=653	del=103	ins=45	het=456	unaligned=151105
+33	ERR657374	snp=653	del=109	ins=45	het=437	unaligned=150283
+34	ERR657375	snp=540	del=109	ins=77	het=495	unaligned=147420
+35	ERR657377	snp=423	del=126	ins=43	het=430	unaligned=146585
+36	ERR657378	snp=649	del=99	ins=44	het=631	unaligned=150487
+37	ERR657379	snp=561	del=155	ins=58	het=412	unaligned=148229
+38	ERR657381	snp=560	del=156	ins=75	het=391	unaligned=147755
+39	ERR657382	snp=563	del=155	ins=53	het=422	unaligned=148412
+40	ERR657383	snp=530	del=110	ins=63	het=612	unaligned=147514
+41	ERR657385	snp=412	del=41	ins=39	het=1478	unaligned=142478
+42	ERR657389	snp=564	del=156	ins=63	het=428	unaligned=148266
+43	ERR657390	snp=574	del=118	ins=65	het=635	unaligned=158844
+44	ERR657393	snp=642	del=97	ins=44	het=589	unaligned=150005
+45	ERR657394	snp=652	del=104	ins=40	het=649	unaligned=149871
+46	ERR657396	snp=659	del=112	ins=39	het=621	unaligned=149951
+47	ERR657397	snp=662	del=109	ins=49	het=371	unaligned=151107
+48	ERR657401	snp=648	del=97	ins=44	het=456	unaligned=151635
+49	ERR657403	snp=648	del=125	ins=50	het=427	unaligned=151547
+50	ERR657407	snp=643	del=97	ins=45	het=584	unaligned=149685
+51	ERR657408	snp=643	del=97	ins=44	het=400	unaligned=151713
+52	ERR657410	snp=645	del=97	ins=55	het=705	unaligned=150165
+53	ERR657412	snp=642	del=97	ins=45	het=707	unaligned=149617
+54	ERR657413	snp=649	del=97	ins=49	het=742	unaligned=150542
+55	ERR657414	snp=647	del=112	ins=51	het=627	unaligned=150461
+56	ERR657415	snp=637	del=97	ins=45	het=587	unaligned=150336
+57	ERR657417	snp=646	del=97	ins=45	het=423	unaligned=154883
+58	ERR657419	snp=647	del=97	ins=55	het=644	unaligned=150315
+59	ERR657420	snp=515	del=123	ins=82	het=371	unaligned=147853
+60	ERR657421	snp=643	del=112	ins=45	het=625	unaligned=150235
+61	ERR657422	snp=644	del=97	ins=43	het=680	unaligned=150115
+62	ERR657423	snp=565	del=156	ins=57	het=454	unaligned=148222
+63	ERR657424	snp=659	del=102	ins=50	het=514	unaligned=151241
+64	ERR657425	snp=529	del=109	ins=75	het=536	unaligned=147606
+65	ERR657426	snp=646	del=97	ins=39	het=704	unaligned=150217
+66	ERR657427	snp=533	del=109	ins=68	het=511	unaligned=147793
+67	ERR657428	snp=637	del=97	ins=43	het=562	unaligned=149716
+68	ERR657429	snp=647	del=97	ins=44	het=596	unaligned=150288
+69	ERR657432	snp=537	del=109	ins=76	het=535	unaligned=146712
+70	ERR657433	snp=644	del=97	ins=39	het=723	unaligned=150513
+71	ERR657434	snp=549	del=161	ins=51	het=626	unaligned=147332
+72	ERR657435	snp=638	del=63	ins=44	het=608	unaligned=151121
+73	ERR657437	snp=542	del=155	ins=58	het=701	unaligned=148734
+74	ERR657439	snp=483	del=109	ins=68	het=1108	unaligned=148023
+75	ERR657442	snp=402	del=133	ins=39	het=1005	unaligned=144345
+76	ERR657444	snp=567	del=155	ins=64	het=408	unaligned=147818
+77	ERR657446	snp=527	del=109	ins=88	het=484	unaligned=147707
+78	ERR657447	snp=647	del=98	ins=45	het=404	unaligned=149923
+79	ERR657448	snp=639	del=59	ins=45	het=611	unaligned=150451
+80	ERR657449	snp=645	del=58	ins=50	het=699	unaligned=149570
+81	ERR657451	snp=526	del=129	ins=53	het=1407	unaligned=153214
+82	ERR657452	snp=515	del=109	ins=82	het=723	unaligned=147787
+83	ERR657453	snp=582	del=118	ins=65	het=650	unaligned=155853
+84	ERR657454	snp=661	del=105	ins=45	het=589	unaligned=148561
+85	ERR731345	snp=418	del=127	ins=38	het=552	unaligned=147207
+86	ERR731346	snp=649	del=105	ins=44	het=705	unaligned=150177
+87	ERR731350	snp=653	del=99	ins=50	het=681	unaligned=150488
+88	ERR731351	snp=662	del=67	ins=45	het=719	unaligned=150608
+89	ERR731352	snp=644	del=98	ins=51	het=691	unaligned=149950
+90	ERR731355	snp=655	del=59	ins=38	het=744	unaligned=150353
+91	ERR731356	snp=657	del=105	ins=38	het=697	unaligned=150348
+92	ERR731357	snp=538	del=98	ins=75	het=443	unaligned=147537
+93	ERR731358	snp=837	del=134	ins=95	het=432	unaligned=285550
+94	ERR731359	snp=652	del=99	ins=48	het=430	unaligned=152078
+95	ERR731360	snp=753	del=103	ins=94	het=537	unaligned=159006
+96	ERR731361	snp=593	del=83	ins=61	het=683	unaligned=157297
+97	ERR731363	snp=650	del=105	ins=39	het=728	unaligned=143182
+98	ERR731364	snp=656	del=103	ins=54	het=673	unaligned=150583
+99	ERR731365	snp=661	del=113	ins=39	het=434	unaligned=151453
+100	ERR731366	snp=660	del=99	ins=39	het=673	unaligned=150460
+101	ERR731367	snp=598	del=108	ins=55	het=675	unaligned=148675
+102	ERR731368	snp=755	del=103	ins=84	het=581	unaligned=159645
+103	ERR731369	snp=533	del=130	ins=56	het=400	unaligned=151519
+104	ERR731370	snp=645	del=104	ins=45	het=867	unaligned=150693
+105	ERR731371	snp=581	del=186	ins=77	het=417	unaligned=160879
+106	ERR731372	snp=540	del=101	ins=87	het=400	unaligned=147085
+107	ERR731373	snp=648	del=106	ins=38	het=2765	unaligned=145114
+108	ERR731374	snp=666	del=106	ins=44	het=667	unaligned=150355
+109	ERR731375	snp=654	del=66	ins=39	het=673	unaligned=150062
+110	ERR731378	snp=655	del=98	ins=45	het=712	unaligned=150282
+111	ERR731379	snp=647	del=98	ins=44	het=443	unaligned=150674
+112	ERR731380	snp=663	del=105	ins=43	het=633	unaligned=147803
+113	ERR731382	snp=642	del=98	ins=45	het=679	unaligned=150435
+114	ERR731384	snp=592	del=83	ins=66	het=745	unaligned=157948
+115	ERR731386	snp=650	del=105	ins=49	het=698	unaligned=150499
+116	ERR731387	snp=646	del=66	ins=43	het=658	unaligned=150336
+117	ERR731388	snp=533	del=59	ins=39	het=1427	unaligned=143205
+118	ERR731389	snp=532	del=109	ins=76	het=575	unaligned=147709
+119	ERR731390	snp=658	del=99	ins=44	het=688	unaligned=150715
+120	ERR731391	snp=661	del=106	ins=58	het=496	unaligned=151695
+121	ERR731392	snp=651	del=105	ins=49	het=632	unaligned=150534
+122	ERR731393	snp=894	del=183	ins=81	het=534	unaligned=148026
+123	ERR731394	snp=646	del=105	ins=46	het=705	unaligned=150635
+124	ERR731395	snp=529	del=109	ins=82	het=603	unaligned=147540
+125	ERR731396	snp=647	del=98	ins=43	het=426	unaligned=151593
+126	ERR731397	snp=639	del=98	ins=44	het=674	unaligned=150017
+127	ERR731398	snp=659	del=107	ins=39	het=697	unaligned=150112
+128	ERR731399	snp=653	del=99	ins=59	het=442	unaligned=151307
+129	ERR731401	snp=323	del=42	ins=32	het=2037	unaligned=142578
+130	ERR731403	snp=521	del=109	ins=68	het=653	unaligned=147904
+131	ERR731404	snp=638	del=104	ins=50	het=484	unaligned=150366
+132	ERR731405	snp=647	del=66	ins=38	het=689	unaligned=150730
+133	ERR731406	snp=585	del=85	ins=73	het=1265	unaligned=143073
+134	ERR731407	snp=656	del=106	ins=54	het=479	unaligned=151016
+135	ERR731408	snp=593	del=83	ins=59	het=671	unaligned=157448
+136	ERR731409	snp=593	del=83	ins=64	het=703	unaligned=155130
+137	ERR731410	snp=651	del=105	ins=39	het=653	unaligned=150651
+138	ERR731413	snp=650	del=98	ins=39	het=631	unaligned=147125
+139	ERR731414	snp=646	del=60	ins=39	het=698	unaligned=150730
+140	ERR731415	snp=558	del=149	ins=60	het=489	unaligned=153710
+141	ERR731416	snp=570	del=120	ins=69	het=553	unaligned=160717
+142	ERR731418	snp=649	del=104	ins=43	het=786	unaligned=150739
+143	ERR731419	snp=560	del=155	ins=53	het=509	unaligned=148758
+144	ERR731421	snp=650	del=99	ins=44	het=868	unaligned=150525
+145	ERR731422	snp=636	del=60	ins=49	het=731	unaligned=149627
+146	ERR731424	snp=639	del=104	ins=44	het=806	unaligned=150597
+147	ERR731426	snp=638	del=97	ins=50	het=675	unaligned=150606
+148	ERR731427	snp=526	del=105	ins=82	het=423	unaligned=147872
+149	ERR731429	snp=645	del=67	ins=51	het=621	unaligned=150730
+150	ERR731430	snp=643	del=98	ins=54	het=496	unaligned=151419
+151	ERR731432	snp=590	del=83	ins=54	het=808	unaligned=157790
+152	ERR731433	snp=642	del=98	ins=39	het=680	unaligned=150050
+153	ERR731434	snp=560	del=80	ins=77	het=523	unaligned=160912
+154	ERR731435	snp=522	del=109	ins=77	het=621	unaligned=147848
+155	ERR731436	snp=653	del=106	ins=46	het=677	unaligned=150433
+156	ERR731438	snp=645	del=98	ins=53	het=546	unaligned=151080
+Opening: core/core.tab
+Opening: core/core.vcf
+Processing contig: AL513382
+Masking alignment at 32 regions
+Generating core/core.full.aln
+Creating TSV file: core/core.txt
+Running: snp-sites -c -o core/core.aln core/core.full.aln
+This analysis is totally hard-core!
+Done.

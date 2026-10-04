@@ -1,0 +1,574 @@
+{
+    "ERR731351": {
+        "susceptibility": {
+            "pST": {
+                "predict": "S"
+            },
+            "ceftriaxone": {
+                "predict": "S"
+            },
+            "ampicillin": {
+                "predict": "R",
+                "called_by": {
+                    "TEM1D": {
+                        "_cls": "Call.SequenceCall",
+                        "genotype": [
+                            1,
+                            1
+                        ],
+                        "genotype_likelihoods": [
+                            -272.2205630494653,
+                            -84.15743578348614,
+                            -3.2629759294778466
+                        ],
+                        "info": {
+                            "copy_number": 0.6621621621621622,
+                            "coverage": {
+                                "percent_coverage": 87.98,
+                                "median_depth": 49,
+                                "min_non_zero_depth": 38,
+                                "kmer_count": 36758,
+                                "klen": 841
+                            },
+                            "expected_depths": [
+                                74
+                            ],
+                            "contamination_depths": [],
+                            "version": "1"
+                        },
+                        "variant": null
+                    }
+                }
+            },
+            "ciprofloxacin": {
+                "predict": "S"
+            },
+            "carbapenem": {
+                "predict": "S"
+            },
+            "IncFIAHI1": {
+                "predict": "R",
+                "called_by": {
+                    "IncFIAHI1": {
+                        "_cls": "Call.SequenceCall",
+                        "genotype": [
+                            1,
+                            1
+                        ],
+                        "genotype_likelihoods": [
+                            -291.82672596353314,
+                            -92.0275296812695,
+                            -3.0089192239545923
+                        ],
+                        "info": {
+                            "copy_number": 0.7027027027027027,
+                            "coverage": {
+                                "percent_coverage": 100.0,
+                                "median_depth": 52,
+                                "min_non_zero_depth": 41,
+                                "kmer_count": 19104,
+                                "klen": 368
+                            },
+                            "expected_depths": [
+                                74
+                            ],
+                            "contamination_depths": [],
+                            "version": "1"
+                        },
+                        "variant": null
+                    }
+                }
+            },
+            "IncFIB_K": {
+                "predict": "S"
+            },
+            "IncFIB_pHCM2": {
+                "predict": "S"
+            },
+            "IncHI1A": {
+                "predict": "R",
+                "called_by": {
+                    "IncHI1A": {
+                        "_cls": "Call.SequenceCall",
+                        "genotype": [
+                            1,
+                            1
+                        ],
+                        "genotype_likelihoods": [
+                            -324.88018899634153,
+                            -105.52087768693718,
+                            -2.962016224111238
+                        ],
+                        "info": {
+                            "copy_number": 0.7702702702702703,
+                            "coverage": {
+                                "percent_coverage": 94.74,
+                                "median_depth": 57,
+                                "min_non_zero_depth": 44,
+                                "kmer_count": 21997,
+                                "klen": 400
+                            },
+                            "expected_depths": [
+                                74
+                            ],
+                            "contamination_depths": [],
+                            "version": "1"
+                        },
+                        "variant": null
+                    }
+                }
+            },
+            "IncHI1BR27": {
+                "predict": "R",
+                "called_by": {
+                    "IncHI1BR27": {
+                        "_cls": "Call.SequenceCall",
+                        "genotype": [
+                            1,
+                            1
+                        ],
+                        "genotype_likelihoods": [
+                            -265.72505256557673,
+                            -81.5739483050257,
+                            -3.3875386521196447
+                        ],
+                        "info": {
+                            "copy_number": 0.6486486486486487,
+                            "coverage": {
+                                "percent_coverage": 100.0,
+                                "median_depth": 48,
+                                "min_non_zero_depth": 35,
+                                "kmer_count": 25146,
+                                "klen": 520
+                            },
+                            "expected_depths": [
+                                74
+                            ],
+                            "contamination_depths": [],
+                            "version": "1"
+                        },
+                        "variant": null
+                    }
+                }
+            },
+            "IncHI2A": {
+                "predict": "S"
+            },
+            "IncI1": {
+                "predict": "S"
+            },
+            "IncL_M": {
+                "predict": "S"
+            },
+            "IncN": {
+                "predict": "S"
+            },
+            "IncX1": {
+                "predict": "S"
+            },
+            "IncX3": {
+                "predict": "S"
+            },
+            "IncY": {
+                "predict": "S"
+            },
+            "azithromycin": {
+                "predict": "S"
+            },
+            "chloramphenicol": {
+                "predict": "R",
+                "called_by": {
+                    "catA1": {
+                        "_cls": "Call.SequenceCall",
+                        "genotype": [
+                            1,
+                            1
+                        ],
+                        "genotype_likelihoods": [
+                            -285.2717920591737,
+                            -89.38461878233825,
+                            -3.0740585261255546
+                        ],
+                        "info": {
+                            "copy_number": 0.6891891891891891,
+                            "coverage": {
+                                "percent_coverage": 96.71,
+                                "median_depth": 51,
+                                "min_non_zero_depth": 32,
+                                "kmer_count": 32987,
+                                "klen": 640
+                            },
+                            "expected_depths": [
+                                74
+                            ],
+                            "contamination_depths": [],
+                            "version": "1"
+                        },
+                        "variant": null
+                    }
+                }
+            },
+            "trimethoprim": {
+                "predict": "R",
+                "called_by": {
+                    "dfrA15": {
+                        "_cls": "Call.SequenceCall",
+                        "genotype": [
+                            1,
+                            1
+                        ],
+                        "genotype_likelihoods": [
+                            -272.2205630494653,
+                            -84.15743578348614,
+                            -3.2629759294778466
+                        ],
+                        "info": {
+                            "copy_number": 0.6621621621621622,
+                            "coverage": {
+                                "percent_coverage": 100.0,
+                                "median_depth": 49,
+                                "min_non_zero_depth": 36,
+                                "kmer_count": 22612,
+                                "klen": 454
+                            },
+                            "expected_depths": [
+                                74
+                            ],
+                            "contamination_depths": [],
+                            "version": "1"
+                        },
+                        "variant": null
+                    }
+                }
+            },
+            "p0111": {
+                "predict": "S"
+            },
+            "sulfonamides": {
+                "predict": "R",
+                "called_by": {
+                    "sul1": {
+                        "_cls": "Call.SequenceCall",
+                        "genotype": [
+                            1,
+                            1
+                        ],
+                        "genotype_likelihoods": [
+                            -233.56575950389123,
+                            -68.97477027048095,
+                            -4.3286116230859335
+                        ],
+                        "info": {
+                            "copy_number": 0.581081081081081,
+                            "coverage": {
+                                "percent_coverage": 100.0,
+                                "median_depth": 43,
+                                "min_non_zero_depth": 25,
+                                "kmer_count": 35316,
+                                "klen": 820
+                            },
+                            "expected_depths": [
+                                74
+                            ],
+                            "contamination_depths": [],
+                            "version": "1"
+                        },
+                        "variant": null
+                    }
+                }
+            },
+            "tetracycline": {
+                "predict": "R",
+                "called_by": {
+                    "tetB": {
+                        "_cls": "Call.SequenceCall",
+                        "genotype": [
+                            1,
+                            1
+                        ],
+                        "genotype_likelihoods": [
+                            -246.36399199913575,
+                            -73.94895675486917,
+                            -3.8866977052697393
+                        ],
+                        "info": {
+                            "copy_number": 0.6081081081081081,
+                            "coverage": {
+                                "percent_coverage": 94.68,
+                                "median_depth": 45,
+                                "min_non_zero_depth": 29,
+                                "kmer_count": 52617,
+                                "klen": 1186
+                            },
+                            "expected_depths": [
+                                74
+                            ],
+                            "contamination_depths": [],
+                            "version": "1"
+                        },
+                        "variant": null
+                    }
+                }
+            },
+            "z66": {
+                "predict": "S"
+            }
+        },
+        "phylogenetics": {
+            "phylo_group": {
+                "Salmonella_enterica": {
+                    "percent_coverage": 100.0,
+                    "median_depth": 74
+                }
+            },
+            "sub_complex": {
+                "Unknown": {
+                    "percent_coverage": -1,
+                    "median_depth": -1
+                }
+            },
+            "species": {
+                "Salmonella_Typhi": {
+                    "percent_coverage": 91.707,
+                    "median_depth": 66
+                }
+            },
+            "lineage": {
+                "lineage": [
+                    "3.1.1"
+                ],
+                "calls_summary": {
+                    "3.1.1": {
+                        "good_nodes": 5,
+                        "tree_depth": 6,
+                        "genotypes": {
+                            "1": 1,
+                            "2": 1,
+                            "3": 1,
+                            "lineage1.2.3.0": 0,
+                            "3.1": 1,
+                            "3.1.1": 1
+                        }
+                    }
+                },
+                "calls": {
+                    "3.1.1": {
+                        "1": {
+                            "T316489C": {
+                                "variant": "ref-T316489C?var_name=T316489C&num_alts=1&ref=AL513382&enum=0&gene=NA&mut=T316489C",
+                                "genotype": [
+                                    0,
+                                    0
+                                ],
+                                "genotype_likelihoods": [
+                                    -55.2728974730667,
+                                    -99999999,
+                                    -9241.063162385446
+                                ],
+                                "info": {
+                                    "coverage": {
+                                        "reference": {
+                                            "percent_coverage": 100.0,
+                                            "median_depth": 76,
+                                            "min_non_zero_depth": 73,
+                                            "kmer_count": 1515,
+                                            "klen": 21
+                                        },
+                                        "alternate": {
+                                            "percent_coverage": 0.0,
+                                            "median_depth": 0,
+                                            "min_non_zero_depth": 0,
+                                            "kmer_count": 0,
+                                            "klen": 21
+                                        }
+                                    },
+                                    "expected_depths": [
+                                        74
+                                    ],
+                                    "contamination_depths": [],
+                                    "filter": [],
+                                    "conf": 9186
+                                },
+                                "_cls": "Call.VariantCall"
+                            }
+                        },
+                        "2": {
+                            "A2737027G": {
+                                "variant": "ref-A2737027G?var_name=A2737027G&num_alts=1&ref=AL513382&enum=0&gene=NA&mut=A2737027G",
+                                "genotype": [
+                                    0,
+                                    0
+                                ],
+                                "genotype_likelihoods": [
+                                    -59.35106157509974,
+                                    -99999999,
+                                    -8921.718093751675
+                                ],
+                                "info": {
+                                    "coverage": {
+                                        "reference": {
+                                            "percent_coverage": 100.0,
+                                            "median_depth": 71,
+                                            "min_non_zero_depth": 69,
+                                            "kmer_count": 1436,
+                                            "klen": 21
+                                        },
+                                        "alternate": {
+                                            "percent_coverage": 0.0,
+                                            "median_depth": 0,
+                                            "min_non_zero_depth": 0,
+                                            "kmer_count": 0,
+                                            "klen": 21
+                                        }
+                                    },
+                                    "expected_depths": [
+                                        74
+                                    ],
+                                    "contamination_depths": [],
+                                    "filter": [],
+                                    "conf": 8862
+                                },
+                                "_cls": "Call.VariantCall"
+                            }
+                        },
+                        "3": {
+                            "T3062270C": {
+                                "variant": "ref-T3062270C?var_name=T3062270C&num_alts=1&ref=AL513382&enum=0&gene=NA&mut=T3062270C",
+                                "genotype": [
+                                    0,
+                                    0
+                                ],
+                                "genotype_likelihoods": [
+                                    -68.88117599237697,
+                                    -99999999,
+                                    -8575.073255662432
+                                ],
+                                "info": {
+                                    "coverage": {
+                                        "reference": {
+                                            "percent_coverage": 100.0,
+                                            "median_depth": 68,
+                                            "min_non_zero_depth": 62,
+                                            "kmer_count": 1349,
+                                            "klen": 21
+                                        },
+                                        "alternate": {
+                                            "percent_coverage": 0.0,
+                                            "median_depth": 0,
+                                            "min_non_zero_depth": 0,
+                                            "kmer_count": 0,
+                                            "klen": 21
+                                        }
+                                    },
+                                    "expected_depths": [
+                                        74
+                                    ],
+                                    "contamination_depths": [],
+                                    "filter": [],
+                                    "conf": 8506
+                                },
+                                "_cls": "Call.VariantCall"
+                            }
+                        },
+                        "lineage1.2.3.0": null,
+                        "3.1": {
+                            "A3069182G": {
+                                "variant": "ref-A3069182G?var_name=A3069182G&num_alts=1&ref=AL513382&enum=0&gene=NA&mut=A3069182G",
+                                "genotype": [
+                                    1,
+                                    1
+                                ],
+                                "genotype_likelihoods": [
+                                    -8515.864023554937,
+                                    -99999999,
+                                    -71.08141845497224
+                                ],
+                                "info": {
+                                    "coverage": {
+                                        "reference": {
+                                            "percent_coverage": 0.0,
+                                            "median_depth": 0,
+                                            "min_non_zero_depth": 0,
+                                            "kmer_count": 0,
+                                            "klen": 21
+                                        },
+                                        "alternate": {
+                                            "percent_coverage": 100.0,
+                                            "median_depth": 66,
+                                            "min_non_zero_depth": 62,
+                                            "kmer_count": 1334,
+                                            "klen": 21
+                                        }
+                                    },
+                                    "expected_depths": [
+                                        74
+                                    ],
+                                    "contamination_depths": [],
+                                    "filter": [],
+                                    "conf": 8445
+                                },
+                                "_cls": "Call.VariantCall"
+                            }
+                        },
+                        "3.1.1": {
+                            "G2732615A": {
+                                "variant": "ref-G2732615A?var_name=G2732615A&num_alts=1&ref=AL513382&enum=0&gene=NA&mut=G2732615A",
+                                "genotype": [
+                                    1,
+                                    1
+                                ],
+                                "genotype_likelihoods": [
+                                    -8500.103292317086,
+                                    -99999999,
+                                    -71.69654710247735
+                                ],
+                                "info": {
+                                    "coverage": {
+                                        "reference": {
+                                            "percent_coverage": 0.0,
+                                            "median_depth": 0,
+                                            "min_non_zero_depth": 0,
+                                            "kmer_count": 0,
+                                            "klen": 21
+                                        },
+                                        "alternate": {
+                                            "percent_coverage": 100.0,
+                                            "median_depth": 66,
+                                            "min_non_zero_depth": 64,
+                                            "kmer_count": 1330,
+                                            "klen": 21
+                                        }
+                                    },
+                                    "expected_depths": [
+                                        74
+                                    ],
+                                    "contamination_depths": [],
+                                    "filter": [],
+                                    "conf": 8428
+                                },
+                                "_cls": "Call.VariantCall"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "kmer": 21,
+        "probe_sets": [
+            "/home/joy/miniforge3/envs/mykrobe/lib/python3.12/site-packages/mykrobe/data/typhi/typhi.lineage.20221109.probes.fa.gz",
+            "/home/joy/miniforge3/envs/mykrobe/lib/python3.12/site-packages/mykrobe/data/typhi/typhi.amr.plas.20240407.probes.fa.gz",
+            "/home/joy/miniforge3/envs/mykrobe/lib/python3.12/site-packages/mykrobe/data/typhi/typhi.probe.invA.20210322.fa.gz",
+            "/home/joy/miniforge3/envs/mykrobe/lib/python3.12/site-packages/mykrobe/data/typhi/typhi.mlst.20210322.fa.gz"
+        ],
+        "files": [
+            "trimmed/ERR731351/ERR731351_1P.fastq.gz",
+            "trimmed/ERR731351/ERR731351_2P.fastq.gz"
+        ],
+        "version": {
+            "mykrobe-predictor": "v0.13.0",
+            "mykrobe-atlas": "v0.13.0",
+            "panel": "20240407/20240407"
+        },
+        "genotype_model": "kmer_count"
+    }
+}

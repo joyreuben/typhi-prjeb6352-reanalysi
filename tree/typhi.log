@@ -1,0 +1,348 @@
+IQ-TREE version 3.1.3 for Linux x86 64-bit built Jul 26 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    David-Ouche (AVX2, FMA3, 7 GB RAM)
+Command: iqtree -s tree/core_snps.aln -m MFP+ASC -B 1000 -T 4 --prefix tree/typhi
+Seed:    997293 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Oct  3 16:16:41 2026
+Kernel:  AVX+FMA - 4 threads (8 CPU cores detected)
+
+Reading alignment file tree/core_snps.aln ... Fasta format detected
+Reading fasta file: done in 0.00231791 secs using 59.49% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00242209 secs using 311% CPU
+Alignment has 158 sequences with 1861 columns, 437 distinct patterns
+809 parsimony-informative, 1052 singleton sites, 0 constant sites
+           Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 6.19888e-05 secs using 230.7% CPU
+   1  ERR573926    0.00%    passed     93.92%
+   2  ERR573932    0.00%    passed     69.17%
+   3  ERR573934    0.00%    passed     93.92%
+   4  ERR573938    0.00%    passed     80.91%
+   5  ERR573941    0.00%    passed     23.30%
+   6  ERR573942    0.00%    passed     23.30%
+   7  ERR573943    0.00%    passed     70.61%
+   8  ERR573944    0.00%    passed     82.89%
+   9  ERR573945    0.00%    failed      0.89%
+  10  ERR573947    0.00%    passed     74.97%
+  11  ERR573948    0.00%    passed     55.14%
+  12  ERR573949    0.00%    passed     65.92%
+  13  ERR573950    0.00%    passed     80.52%
+  14  ERR573952    0.00%    passed     72.20%
+  15  ERR573954    0.00%    passed     72.21%
+  16  ERR573955    0.00%    passed     72.20%
+  17  ERR573956    0.00%    passed     71.66%
+  18  ERR573957    0.00%    passed     71.66%
+  19  ERR573959    0.00%    passed     69.17%
+  20  ERR573960    0.00%    passed     85.59%
+  21  ERR573961    0.00%    passed     59.41%
+  22  ERR573962    0.00%    failed      0.01%
+  23  ERR573964    0.00%    passed     59.41%
+  24  ERR573966    0.00%    passed     84.86%
+  25  ERR573968    0.00%    failed      0.74%
+  26  ERR573969    0.00%    passed     74.97%
+  27  ERR573971    0.00%    passed     74.88%
+  28  ERR573972    0.00%    passed     59.41%
+  29  ERR573973    0.00%    passed     80.60%
+  30  ERR657370    0.00%    passed     87.52%
+  31  ERR657371    0.00%    passed     71.82%
+  32  ERR657372    0.00%    passed     83.27%
+  33  ERR657373    0.00%    passed     80.83%
+  34  ERR657374    0.00%    passed     75.15%
+  35  ERR657375    0.00%    passed     12.89%
+  36  ERR657377    0.00%    passed     65.92%
+  37  ERR657378    0.00%    passed     93.39%
+  38  ERR657379    0.00%    passed     79.73%
+  39  ERR657381    0.00%    passed     92.83%
+  40  ERR657382    0.00%    passed     81.65%
+  41  ERR657383    0.00%    passed     21.66%
+  42  ERR657385    0.00%    passed     65.92%
+  43  ERR657389    0.00%    passed     83.27%
+  44  ERR657390    0.00%    failed      0.00%
+  45  ERR657393    0.00%    passed     61.64%
+  46  ERR657394    0.00%    passed     80.59%
+  47  ERR657396    0.00%    passed     74.52%
+  48  ERR657397    0.00%    passed     83.61%
+  49  ERR657401    0.00%    passed     70.45%
+  50  ERR657403    0.00%    passed     62.47%
+  51  ERR657407    0.00%    passed     78.08%
+  52  ERR657408    0.00%    passed     74.10%
+  53  ERR657410    0.00%    passed     80.30%
+  54  ERR657412    0.00%    passed     74.10%
+  55  ERR657413    0.00%    passed     89.75%
+  56  ERR657414    0.00%    passed     81.86%
+  57  ERR657415    0.00%    passed     77.69%
+  58  ERR657417    0.00%    passed     68.86%
+  59  ERR657419    0.00%    passed     80.30%
+  60  ERR657420    0.00%    passed     34.30%
+  61  ERR657421    0.00%    passed     81.86%
+  62  ERR657422    0.00%    passed     77.69%
+  63  ERR657423    0.00%    passed     82.85%
+  64  ERR657424    0.00%    passed     80.77%
+  65  ERR657425    0.00%    passed     12.90%
+  66  ERR657426    0.00%    passed     80.30%
+  67  ERR657427    0.00%    passed     20.66%
+  68  ERR657428    0.00%    passed     77.69%
+  69  ERR657429    0.00%    passed     77.46%
+  70  ERR657432    0.00%    passed     13.08%
+  71  ERR657433    0.00%    passed     80.30%
+  72  ERR657434    0.00%    passed     79.73%
+  73  ERR657435    0.00%    passed     75.15%
+  74  ERR657437    0.00%    passed     81.65%
+  75  ERR657439    0.00%    passed     12.89%
+  76  ERR657442    0.00%    passed     79.73%
+  77  ERR657444    0.00%    passed     82.85%
+  78  ERR657446    0.00%    passed     13.65%
+  79  ERR657447    0.00%    passed     78.17%
+  80  ERR657448    0.00%    passed     71.82%
+  81  ERR657449    0.00%    passed     92.00%
+  82  ERR657451    0.00%    passed     41.15%
+  83  ERR657452    0.00%    passed     12.89%
+  84  ERR657453    0.00%    failed      0.00%
+  85  ERR657454    0.00%    passed     65.84%
+  86  ERR731345    0.00%    passed     78.10%
+  87  ERR731346    0.00%    passed     65.92%
+  88  ERR731350    0.00%    passed     74.88%
+  89  ERR731351    0.00%    passed     74.88%
+  90  ERR731352    0.00%    passed     72.20%
+  91  ERR731355    0.00%    passed     91.66%
+  92  ERR731356    0.00%    passed     83.50%
+  93  ERR731357    0.00%    passed     19.20%
+  94  ERR731358    0.00%    failed      0.00%
+  95  ERR731359    0.00%    passed     84.95%
+  96  ERR731360    0.00%    passed     59.41%
+  97  ERR731361    0.00%    failed      0.74%
+  98  ERR731363    0.00%    passed     78.10%
+  99  ERR731364    0.00%    passed     68.12%
+ 100  ERR731365    0.00%    passed     74.88%
+ 101  ERR731366    0.00%    passed     74.88%
+ 102  ERR731367    0.00%    failed      0.30%
+ 103  ERR731368    0.00%    passed     59.41%
+ 104  ERR731369    0.00%    passed     69.98%
+ 105  ERR731370    0.00%    passed     83.50%
+ 106  ERR731371    0.00%    passed     25.38%
+ 107  ERR731372    0.00%    passed     19.20%
+ 108  ERR731373    0.00%    passed     74.88%
+ 109  ERR731374    0.00%    passed     74.88%
+ 110  ERR731375    0.00%    passed     72.20%
+ 111  ERR731378    0.00%    passed     80.94%
+ 112  ERR731379    0.00%    passed     78.08%
+ 113  ERR731380    0.00%    passed     74.18%
+ 114  ERR731382    0.00%    passed     74.88%
+ 115  ERR731384    0.00%    failed      0.74%
+ 116  ERR731386    0.00%    passed     78.01%
+ 117  ERR731387    0.00%    passed     83.41%
+ 118  ERR731388    0.00%    passed     68.12%
+ 119  ERR731389    0.00%    passed     17.74%
+ 120  ERR731390    0.00%    passed     74.88%
+ 121  ERR731391    0.00%    passed     91.52%
+ 122  ERR731392    0.00%    passed     77.02%
+ 123  ERR731393    0.00%    failed      0.01%
+ 124  ERR731394    0.00%    passed     72.20%
+ 125  ERR731395    0.00%    passed     19.19%
+ 126  ERR731396    0.00%    passed     71.98%
+ 127  ERR731397    0.00%    passed     68.88%
+ 128  ERR731398    0.00%    passed     72.11%
+ 129  ERR731399    0.00%    passed     91.52%
+ 130  ERR731401    0.00%    passed     59.41%
+ 131  ERR731403    0.00%    passed     19.19%
+ 132  ERR731404    0.00%    passed     69.17%
+ 133  ERR731405    0.00%    passed     90.80%
+ 134  ERR731406    0.00%    failed      0.00%
+ 135  ERR731407    0.00%    passed     91.52%
+ 136  ERR731408    0.00%    failed      0.74%
+ 137  ERR731409    0.00%    failed      0.74%
+ 138  ERR731410    0.00%    passed     89.75%
+ 139  ERR731413    0.00%    passed     74.88%
+ 140  ERR731414    0.00%    passed     74.88%
+ 141  ERR731415    0.00%    passed     77.67%
+ 142  ERR731416    0.00%    failed      0.00%
+ 143  ERR731418    0.00%    passed     89.75%
+ 144  ERR731419    0.00%    passed     78.46%
+ 145  ERR731421    0.00%    passed     74.88%
+ 146  ERR731422    0.00%    passed     71.82%
+ 147  ERR731424    0.00%    passed     65.72%
+ 148  ERR731426    0.00%    passed     69.17%
+ 149  ERR731427    0.00%    passed     16.30%
+ 150  ERR731429    0.00%    passed     74.88%
+ 151  ERR731430    0.00%    passed     91.52%
+ 152  ERR731432    0.00%    failed      0.74%
+ 153  ERR731433    0.00%    passed     76.30%
+ 154  ERR731434    0.00%    failed      0.00%
+ 155  ERR731435    0.00%    passed     20.66%
+ 156  ERR731436    0.00%    passed     74.88%
+ 157  ERR731438    0.00%    passed     91.52%
+ 158  Reference    0.00%    failed      0.40%
+****  TOTAL        0.00%  17 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: ERR573934 is identical to ERR573926 but kept for subsequent analysis
+NOTE: ERR731426 is identical to ERR573932 but kept for subsequent analysis
+NOTE: ERR573942 is identical to ERR573941 but kept for subsequent analysis
+NOTE: ERR657377 is identical to ERR573949 but kept for subsequent analysis
+NOTE: ERR573957 is identical to ERR573956 but kept for subsequent analysis
+NOTE: ERR573964 is identical to ERR573961 but kept for subsequent analysis
+NOTE: ERR731361 is identical to ERR573968 but kept for subsequent analysis
+NOTE: ERR657448 is identical to ERR657371 but kept for subsequent analysis
+NOTE: ERR657389 is identical to ERR657372 but kept for subsequent analysis
+NOTE: ERR657439 is identical to ERR657375 but kept for subsequent analysis
+NOTE: ERR657434 is identical to ERR657379 but kept for subsequent analysis
+NOTE: ERR657437 is identical to ERR657382 but kept for subsequent analysis
+NOTE: ERR657419 is identical to ERR657410 but kept for subsequent analysis
+NOTE: ERR731410 is identical to ERR657413 but kept for subsequent analysis
+NOTE: ERR657421 is identical to ERR657414 but kept for subsequent analysis
+NOTE: ERR657422 is identical to ERR657415 but kept for subsequent analysis
+NOTE: ERR731351 is identical to ERR731350 but kept for subsequent analysis
+NOTE: ERR731388 is identical to ERR731364 but kept for subsequent analysis
+NOTE: ERR731399 is identical to ERR731391 but kept for subsequent analysis
+NOTE: ERR731403 is identical to ERR731395 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.000780106 secs using 306.4% CPU
+Identifying sites to remove: done in 0.00178981 secs using 354.7% CPU
+NOTE: 31 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: ERR657385 (identical to ERR573949) is ignored but added at the end
+NOTE: ERR731346 (identical to ERR573949) is ignored but added at the end
+NOTE: ERR573972 (identical to ERR573961) is ignored but added at the end
+NOTE: ERR731360 (identical to ERR573961) is ignored but added at the end
+NOTE: ERR731368 (identical to ERR573961) is ignored but added at the end
+NOTE: ERR731401 (identical to ERR573961) is ignored but added at the end
+NOTE: ERR731384 (identical to ERR573968) is ignored but added at the end
+NOTE: ERR731408 (identical to ERR573968) is ignored but added at the end
+NOTE: ERR731409 (identical to ERR573968) is ignored but added at the end
+NOTE: ERR731432 (identical to ERR573968) is ignored but added at the end
+NOTE: ERR731422 (identical to ERR657371) is ignored but added at the end
+NOTE: ERR657452 (identical to ERR657375) is ignored but added at the end
+NOTE: ERR657442 (identical to ERR657379) is ignored but added at the end
+NOTE: ERR657426 (identical to ERR657410) is ignored but added at the end
+NOTE: ERR657433 (identical to ERR657410) is ignored but added at the end
+NOTE: ERR731418 (identical to ERR657413) is ignored but added at the end
+NOTE: ERR657428 (identical to ERR657415) is ignored but added at the end
+NOTE: ERR731365 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731366 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731373 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731374 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731382 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731390 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731413 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731414 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731421 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731429 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731436 (identical to ERR731350) is ignored but added at the end
+NOTE: ERR731407 (identical to ERR731391) is ignored but added at the end
+NOTE: ERR731430 (identical to ERR731391) is ignored but added at the end
+NOTE: ERR731438 (identical to ERR731391) is ignored but added at the end
+Alignment was printed to tree/typhi.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to tree/typhi.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.019 seconds
+Perform fast likelihood tree search using GTR+ASC model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -10468.396
+Optimal log-likelihood: -10468.101
+Rate parameters:  A-C: 1.01351  A-G: 7.76412  A-T: 1.88907  C-G: 0.05888  C-T: 8.01746  G-T: 1.00000
+Base frequencies:  A: 0.111  C: 0.389  G: 0.392  T: 0.108
+Parameters optimization took 1 rounds (0.018 sec)
+Time for fast ML tree search: 1.246 seconds
+
+NOTE: ModelFinder requires 19 MB RAM!
+ModelFinder will test up to 484 DNA models (sample size: 1861 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+Akaike Information Criterion:           TVMe+ASC
+Corrected Akaike Information Criterion: TVMe+ASC
+Bayesian Information Criterion:         K3P+ASC
+Best-fit model: K3P+ASC chosen according to BIC
+
+All model information printed to tree/typhi.model.gz
+CPU time for ModelFinder: 12.163 seconds (0h:0m:12s)
+Wall-clock time for ModelFinder: 3.079 seconds (0h:0m:3s)
+Generating 1000 samples for ultrafast bootstrap (seed: 997293)...
+
+NOTE: 3 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -10518.614
+2. Current log-likelihood: -10474.980
+Optimal log-likelihood: -10474.980
+Rate parameters:  A-C: 1.00000  A-G: 7.79878  A-T: 0.36331  C-G: 0.36331  C-T: 7.79878  G-T: 1.00000
+Base frequencies:  A: 0.250  C: 0.250  G: 0.250  T: 0.250
+Parameters optimization took 2 rounds (0.017 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.00435019 secs using 397.9% CPU
+Computing ML distances took 0.004516 sec (of wall-clock time) 0.017982 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000190973 secs using 423.1% CPU
+Constructing RapidNJ tree: done in 0.00369406 secs using 467.3% CPU
+Computing RapidNJ tree took 0.003988 sec (of wall-clock time) 0.019906 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -10501.244
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.456 second
+Computing log-likelihood of 98 initial trees ... 0.538 seconds
+Current best score: -10474.980
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -10474.980
+Iteration 10 / LogL: -10485.228 / Time: 0h:0m:26s
+Iteration 20 / LogL: -10485.283 / Time: 0h:0m:55s
+Finish initializing candidate tree set (20)
+Current best tree score: -10474.980 / CPU time: 51.638
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -10490.882 / Time: 0h:1m:3s (0h:2m:27s left)
+Iteration 40 / LogL: -10588.762 / Time: 0h:1m:11s (0h:1m:46s left)
+Iteration 50 / LogL: -10510.098 / Time: 0h:1m:22s (0h:1m:22s left)
+Log-likelihood cutoff on original alignment: -10542.780
+Iteration 60 / LogL: -10504.738 / Time: 0h:1m:29s (0h:1m:0s left)
+Iteration 70 / LogL: -10500.096 / Time: 0h:1m:42s (0h:0m:44s left)
+Iteration 80 / LogL: -10500.534 / Time: 0h:1m:49s (0h:0m:28s left)
+Iteration 90 / LogL: -10503.933 / Time: 0h:2m:1s (0h:0m:14s left)
+Iteration 100 / LogL: -10496.406 / Time: 0h:2m:12s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -10542.780
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:2m:14s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -10474.980
+Optimal log-likelihood: -10474.980
+Rate parameters:  A-C: 1.00000  A-G: 7.79963  A-T: 0.36336  C-G: 0.36336  C-T: 7.79963  G-T: 1.00000
+Base frequencies:  A: 0.250  C: 0.250  G: 0.250  T: 0.250
+Parameters optimization took 1 rounds (0.008 sec)
+BEST SCORE FOUND : -10474.980
+Creating bootstrap support values...
+Split supports printed to NEXUS file tree/typhi.splits.nex
+Total tree length: 0.004
+
+Total number of iterations: 102
+CPU time used for tree search: 506.130 sec (0h:8m:26s)
+Wall-clock time used for tree search: 130.592 sec (0h:2m:10s)
+Total CPU time used: 520.725 sec (0h:8m:40s)
+Total wall-clock time used: 134.308 sec (0h:2m:14s)
+
+Computing bootstrap consensus tree...
+Reading input file tree/typhi.splits.nex...
+127 taxa and 1218 splits.
+Consensus tree written to tree/typhi.contree
+Reading input trees file tree/typhi.contree
+Log-likelihood of consensus tree: -10495.667
+
+Analysis results written to: 
+  IQ-TREE report:                tree/typhi.iqtree
+  Maximum-likelihood tree:       tree/typhi.treefile
+  Likelihood distances:          tree/typhi.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          tree/typhi.splits.nex
+  Consensus tree:                tree/typhi.contree
+  Screen log file:               tree/typhi.log
+
+Date and Time: Sat Oct  3 16:18:56 2026

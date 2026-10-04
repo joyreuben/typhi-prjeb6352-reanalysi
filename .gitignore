@@ -1,0 +1,29 @@
+# Large data: not in the repo (see README, "What is not in this repo")
+raw_reads/
+sra_fetch/
+trimmed/*
+!trimmed/trim_summary.tsv
+snippy/
+results/snippy_keep/
+results/seqsero2/
+qc/fastqc_raw/
+qc/multiqc_raw/multiqc_raw_data/
+core/core.full.aln
+core/core.ref.fa*
+gubbins/clean.full.aln
+mykrobe/data/
+mykrobe/tmp_*/
+mykrobe/*.stdout
+mykrobe/*.part
+ref/
+
+# Third-party clone (github.com/katholt/genotyphi)
+genotyphi/
+
+# Run logs, scratch and stale files
+/*.log
+qc/*.log
+completed_snippy_ids.txt
+integrity_check.txt
+__pycache__/
+*.pyc

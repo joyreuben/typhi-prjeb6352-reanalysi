@@ -1,0 +1,19 @@
+nohup: ignoring input
+157 samples, 808 SNPs (minor allele in >=2 samples), MDR 74/157
+
+clade x MDR:
+MDR    non-MDR  MDR
+clade              
+1            4    0
+2            2    0
+3           17    0
+4            1    0
+5            8    0
+6           47   74
+7            1    0
+8            1    0
+9            1    0
+10           1    0
+
+== all 157: 157 samples, 808 SNPs, MDR 74
+  permutations 10/100
