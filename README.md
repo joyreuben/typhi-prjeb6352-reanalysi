@@ -96,3 +96,4 @@ they were resolved.
 WSL2 Ubuntu 24.04, conda. Main env `typhi_amr` (snippy, trimmomatic, fastqc, gubbins, iqtree, snp-sites,
 python 3.10, pandas, scikit-learn, dendropy). Separate envs: `seqsero2`, `mykrobe`, `multiqc`.
 Gubbins 3.3 and Mykrobe need `setuptools<81` (they import `pkg_resources`).
+# typhi-prjeb6352-reanalysi
