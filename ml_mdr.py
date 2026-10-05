@@ -3,7 +3,8 @@
 
 Compares cross-validation schemes on the same model and data:
   random  - stratified 5-fold, repeated (what the original study did)
-  clade   - leave-clade-out: GroupKFold on clusters cut from the IQ-TREE tree (patristic distance)
+  clade   - leave-clade-out: GroupKFold on clusters cut from the IQ-TREE tree (patristic distance,
+            Ward linkage; average/complete linkage gave one giant cluster + singletons)
   genotype- leave-genotype-out: GroupKFold on GenoTyphi genotype
 Plus:
   baseline    - "is it genotype 3.1.1?" as the only predictor (pure lineage)
@@ -11,7 +12,9 @@ Plus:
   within 3.1.1- the same comparison restricted to the 98 genotype-3.1.1 samples
                 (does the chromosome predict who acquired the MDR plasmid inside one lineage?)
 
-AUROC is computed on pooled out-of-fold predictions, so folds holding only one class are fine.
+AUROC is computed on pooled out-of-fold predictions. If a training fold lacks one class (e.g. all MDR
+isolates are in the held-out clade), its test samples cannot be scored: they are left out and the
+fraction scored is reported. AUROC is NaN ("not estimable") when the scored samples hold one class.
 
 Usage (typhi_amr env):  python ml_mdr.py [n_permutations]   (default 100)
 Output: ml/cv_results.tsv, ml/permutation_null.tsv, ml/feature_importance.tsv, ml/clades.tsv
@@ -50,7 +53,7 @@ D = np.array([[pdm.distance(taxa[a], taxa[b]) if a != b else 0.0 for b in names]
 
 def tree_clades(sub, k):
     idx = [names.index(s) for s in sub]
-    Z = linkage(squareform(D[np.ix_(idx, idx)], checks=False), method="average")
+    Z = linkage(squareform(D[np.ix_(idx, idx)], checks=False), method="ward")
     return pd.Series(fcluster(Z, t=k, criterion="maxclust"), index=sub)
 
 
@@ -68,10 +71,9 @@ def splits(scheme, y, groups, seed):
 
 
 def oof_scores(X, y, folds, rf):
-    p = np.zeros(len(y))
+    p = np.full(len(y), np.nan)
     for tr, te in folds:
-        if len(np.unique(y[tr])) < 2:          # training fold has one class only
-            p[te] = y[tr][0]
+        if len(np.unique(y[tr])) < 2:          # training fold has one class only: cannot score
             continue
         m = RandomForestClassifier(**rf).fit(X[tr], y[tr])
         p[te] = m.predict_proba(X[te])[:, 1]
@@ -82,12 +84,17 @@ def evaluate(X, y, groups_by_scheme, rf, n_rep):
     out = {}
     for scheme, groups in groups_by_scheme.items():
         reps = n_rep if scheme == "random" else 1
-        aucs, bals = [], []
+        aucs, bals, fracs = [], [], []
         for r in range(reps):
             p = oof_scores(X, y, splits(scheme, y, groups, SEED + r), rf)
-            aucs.append(roc_auc_score(y, p))
-            bals.append(balanced_accuracy_score(y, p >= 0.5))
-        out[scheme] = (np.mean(aucs), np.mean(bals))
+            ok = ~np.isnan(p)
+            fracs.append(ok.mean())
+            if len(np.unique(y[ok])) < 2:
+                aucs.append(np.nan); bals.append(np.nan)
+                continue
+            aucs.append(roc_auc_score(y[ok], p[ok]))
+            bals.append(balanced_accuracy_score(y[ok], p[ok] >= 0.5))
+        out[scheme] = (np.mean(aucs), np.mean(bals), np.mean(fracs))
     return out
 
 
@@ -98,6 +105,9 @@ for subset_name, keep in [("all 157", lab.index), ("within 3.1.1", lab.index[lab
     Xs = Xs.loc[:, (Xs.sum(axis=0) >= 2) & (Xs.sum(axis=0) <= len(Xs) - 2)].values
     y = lab.loc[keep, "MDR"].values
     sub_clades = tree_clades(list(keep), N_CLADES) if subset_name != "all 157" else lab.loc[keep, "clade"]
+    if subset_name != "all 157":
+        print(f"\nclade x MDR ({subset_name}):")
+        print(pd.crosstab(sub_clades, y).rename(columns={0: "non-MDR", 1: "MDR"}).to_string())
     schemes = {"random": None, "clade": sub_clades.values}
     if subset_name == "all 157":
         schemes["genotype"] = lab.loc[keep, "genotype"].values
@@ -108,7 +118,7 @@ for subset_name, keep in [("all 157", lab.index), ("within 3.1.1", lab.index[lab
         base = (lab.loc[keep, "genotype"] == "3.1.1").astype(int).values
         rows.append(dict(subset=subset_name, scheme="baseline: genotype==3.1.1",
                          AUROC=roc_auc_score(y, base), bal_acc=balanced_accuracy_score(y, base),
-                         perm_p=np.nan))
+                         frac_scored=1.0, perm_p=np.nan))
 
     null = {s: [] for s in schemes}
     for i in range(N_PERM):
@@ -120,9 +130,10 @@ for subset_name, keep in [("all 157", lab.index), ("within 3.1.1", lab.index[lab
         if (i + 1) % 10 == 0:
             print(f"  permutations {i + 1}/{N_PERM}", flush=True)
 
-    for s, (auc, bal) in real.items():
-        p = (1 + sum(a >= auc for a in null[s])) / (1 + N_PERM)
-        rows.append(dict(subset=subset_name, scheme=s, AUROC=auc, bal_acc=bal, perm_p=p))
+    for s, (auc, bal, frac) in real.items():
+        nl = [a for a in null[s] if not np.isnan(a)]
+        p = np.nan if np.isnan(auc) or not nl else (1 + sum(a >= auc for a in nl)) / (1 + len(nl))
+        rows.append(dict(subset=subset_name, scheme=s, AUROC=auc, bal_acc=bal, frac_scored=frac, perm_p=p))
 
 res = pd.DataFrame(rows)
 res.to_csv("ml/cv_results.tsv", sep="\t", index=False, float_format="%.3f")

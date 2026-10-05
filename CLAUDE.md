@@ -134,3 +134,10 @@ This redo uses **all 229 Nigerian runs** in PRJEB6352 (Wellcome Sanger, 2008–2
   `ml_mdr.py [n_perm]`: RF (500 trees, balanced), singletons dropped; random 5-fold x5 vs leave-clade-out (10 tree
   clusters, patristic/average linkage) vs leave-genotype-out; genotype==3.1.1 baseline; label permutations;
   repeated within 3.1.1 only. Outputs ml/cv_results.tsv etc.
+- 2026-10-05: ml_mdr.py run 1 (100 perms): baseline genotype==3.1.1 AUROC 0.855; random CV 0.924 (p=0.01);
+  within 3.1.1: random 0.771 (p=0.01) vs clade 0.561 (p=0.17). **Run 1 clade/genotype results invalid:** average
+  linkage made one giant clade (121/157 all-sample, 79/98 within 3.1.1), and folds whose training set had no MDR were
+  scored as constant 0 → AUROC 0.28/0.15 (artifact, below 0.5). Fixed: Ward linkage (3.1.1 clades 48,12,11,7,5,5,4,4,1,1),
+  unscorable folds left out (NaN, `frac_scored` column). All-157 leave-clade/genotype-out is inherently not estimable
+  (all MDR in one lineage). Top RF features are minor alleles found only in non-MDR isolates = lineage markers.
+  Git: local repo initialised, `.gitignore` + `README.md` written, first commit 245f5af (no remote yet).
