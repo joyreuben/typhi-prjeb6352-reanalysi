@@ -10,7 +10,7 @@ AUROC 1.00 with random cross-validation. In a clonal pathogen, random CV lets li
 stand in for the label (population-structure leakage). This re-analysis adds recombination
 filtering, phylogeny-aware cross-validation and label-permutation tests.
 
-**Status:** work in progress. Genomics steps are complete; the ML analysis is running.
+**Status:** genomics and the first ML analysis are complete; write-up in progress.
 
 ## Findings so far
 
@@ -80,6 +80,31 @@ evaluated four ways:
 
 Each CV scheme gets a label-permutation p-value. The whole analysis is repeated within genotype 3.1.1
 only, asking whether the chromosome predicts which 3.1.1 isolates acquired the MDR plasmid.
+
+## ML results (`ml/cv_results.tsv`)
+
+Random Forest predicting MDR from chromosomal core SNPs; AUROC on pooled out-of-fold predictions;
+permutation p from 100 label shuffles (0.010 is the smallest possible value).
+
+| Samples | Evaluation | AUROC | Balanced acc. | Fraction scored | Perm. p |
+|---|---|---|---|---|---|
+| all 157 | baseline rule: genotype == 3.1.1 | 0.855 | 0.855 | 1.00 | – |
+| all 157 | random 5-fold CV | 0.924 | 0.913 | 1.00 | 0.010 |
+| all 157 | leave-clade-out | not estimable | – | 0.24 | – |
+| all 157 | leave-genotype-out | not estimable | – | 0.38 | – |
+| 98 genotype 3.1.1 | random 5-fold CV | 0.771 | 0.809 | 1.00 | 0.010 |
+| 98 genotype 3.1.1 | leave-clade-out (10 Ward clades) | 0.707 | 0.599 | 1.00 | 0.010 |
+
+- **Across all isolates, the model mostly learns lineage.** Random CV (0.924) is only a little above
+  the one-line rule "is it genotype 3.1.1?" (0.855). The most important SNPs are alleles found only
+  in non-MDR isolates, i.e. markers of the non-MDR lineages.
+- **Lineage-held-out performance cannot be measured across all isolates.** Every MDR isolate is in
+  genotype 3.1.1, so when that lineage is held out the training data has no MDR examples. A claim of
+  "AUROC 1.00" for this kind of data only shows that the model recognises lineages.
+- **Within genotype 3.1.1, a modest signal survives holding out sub-clades** (AUROC 0.707, above
+  all 100 permutations, max null 0.678), but balanced accuracy drops to 0.599. This fits the IncHI1
+  MDR plasmid being inherited along 3.1.1 sub-branches: chromosomal SNPs mark the sub-lineages that
+  carry it. It is still population structure at a finer scale, not a resistance mechanism.
 
 ## What is not in this repo
 

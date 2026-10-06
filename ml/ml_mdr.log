@@ -4,16 +4,61 @@ nohup: ignoring input
 clade x MDR:
 MDR    non-MDR  MDR
 clade              
-1            4    0
-2            2    0
-3           17    0
-4            1    0
-5            8    0
-6           47   74
-7            1    0
-8            1    0
+1           17    0
+2            1    0
+3            4    0
+4            8    0
+5            1    0
+6            2    0
+7            2    0
+8           46   74
 9            1    0
 10           1    0
 
 == all 157: 157 samples, 808 SNPs, MDR 74
   permutations 10/100
+  permutations 20/100
+  permutations 30/100
+  permutations 40/100
+  permutations 50/100
+  permutations 60/100
+  permutations 70/100
+  permutations 80/100
+  permutations 90/100
+  permutations 100/100
+
+clade x MDR (within 3.1.1):
+col_0  non-MDR  MDR
+row_0              
+1            5    0
+2            1    3
+3            0    4
+4            2   10
+5            4    1
+6            1   10
+7            0    7
+8           11   37
+9            0    1
+10           0    1
+
+== within 3.1.1: 98 samples, 99 SNPs, MDR 74
+  permutations 10/100
+  permutations 20/100
+  permutations 30/100
+  permutations 40/100
+  permutations 50/100
+  permutations 60/100
+  permutations 70/100
+  permutations 80/100
+  permutations 90/100
+  permutations 100/100
+
+      subset                    scheme  AUROC  bal_acc  frac_scored  perm_p
+     all 157 baseline: genotype==3.1.1  0.855    0.855        1.000     NaN
+     all 157                    random  0.924    0.913        1.000   0.010
+     all 157                     clade    NaN      NaN        0.236     NaN
+     all 157                  genotype    NaN      NaN        0.376     NaN
+within 3.1.1                    random  0.771    0.809        1.000   0.010
+within 3.1.1                     clade  0.707    0.599        1.000   0.010
+
+wrote ml/cv_results.tsv, ml/permutation_null.tsv, ml/feature_importance.tsv, ml/clades.tsv

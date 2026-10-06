@@ -140,4 +140,11 @@ This redo uses **all 229 Nigerian runs** in PRJEB6352 (Wellcome Sanger, 2008–2
   scored as constant 0 → AUROC 0.28/0.15 (artifact, below 0.5). Fixed: Ward linkage (3.1.1 clades 48,12,11,7,5,5,4,4,1,1),
   unscorable folds left out (NaN, `frac_scored` column). All-157 leave-clade/genotype-out is inherently not estimable
   (all MDR in one lineage). Top RF features are minor alleles found only in non-MDR isolates = lineage markers.
-  Git: local repo initialised, `.gitignore` + `README.md` written, first commit 245f5af (no remote yet).
+  Git: public repo https://github.com/joyreuben/typhi-prjeb6352-reanalysi (pushed 2026-10-05). Large data is
+  excluded by `.gitignore`; push later changes with `git add ... && git commit && git push` (token stored).
+- 2026-10-06: ml_mdr.py run 2 (fixed; 100 perms) → ml/cv_results.tsv. All 157: baseline 0.855; random 0.924 (p=0.01);
+  leave-clade-out and leave-genotype-out NOT ESTIMABLE (only 24% / 38% of samples scorable: all MDR in 3.1.1).
+  Within 3.1.1 (Ward clades 5/4/4/12/5/11/7/48/1/1): random 0.771 (bal 0.809, p=0.01); **leave-clade-out 0.707
+  (bal 0.599, p=0.01; null max 0.678)** → modest signal survives sub-clade hold-out (plasmid inherited along
+  3.1.1 sub-branches = finer-scale structure). Run 1's 0.561/p=0.17 was an artifact of the giant average-linkage clade.
+  Results table added to README.

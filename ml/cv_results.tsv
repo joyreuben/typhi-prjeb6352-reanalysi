@@ -1,0 +1,7 @@
+subset	scheme	AUROC	bal_acc	frac_scored	perm_p
+all 157	baseline: genotype==3.1.1	0.855	0.855	1.000	
+all 157	random	0.924	0.913	1.000	0.010
+all 157	clade			0.236	
+all 157	genotype			0.376	
+within 3.1.1	random	0.771	0.809	1.000	0.010
+within 3.1.1	clade	0.707	0.599	1.000	0.010
